@@ -28,7 +28,14 @@ hr{border:2px dashed #00FFFF;}
   </head>
   <body style="background-color:black;">
     <srcipt>
-      
+      document.getElementById("btn").onclick=function(){send()};//设置按钮触发事件（函数send（））
+        function send(){
+            var g=new Date();//获取时间
+            var value= document.getElementById("typing").value;//获得文本框里的内容
+            var p= document.createElement("p");//创建新元素，也即结点
+            p.innerHTML='<hr>'+value+'<br>'+g.toUTCString();//往结点里塞内容
+            document.getElementById("commend").prepend(p); 向指定内容（此处是id"commend"）里添加子节点，作为第一个结点。
+        }
     </srcipt>
     <div id="header">
     <table>
