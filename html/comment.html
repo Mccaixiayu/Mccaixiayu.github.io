@@ -32,20 +32,7 @@ hr{border:2px dashed #00FFFF;}
       </style>
   </head>
   <body style="background-color:black;">
-    <script>
-      document.getElementById("btn").addEventListener('click', send);
-      function send(){
-      if (button.value === 'send') {
-        
-            var g=new Date();
-            var value= document.getElementById("typing").value;
-            var p= document.createElement("p");
-            p.innerHTML='<hr>'+'<h1>'+value+'<h1>'+'<br>'+g.toUTCString();
-            document.getElementById("commend").prepend(p);
-        console.log("按下");
-        }
-      }
-    </script>
+    
     <div id="header">
     <table>
       <tr>
@@ -62,5 +49,19 @@ hr{border:2px dashed #00FFFF;}
             <hr>
             <div id="commend"></div>
         </div>
+    <script>
+      document.getElementById("btn").addEventListener('click', send);
+      function send(){
+      if (button.value === 'send') {
+        
+            var g=new Date();
+            var value= document.getElementById("typing").value;
+            var p= document.createElement("p");
+            p.innerHTML='<hr>'+'<h1>'+value+'<h1>'+'<br>'+g.toUTCString();
+            document.getElementById("commend").prepend(p);
+        console.log("按下");
+        }
+      }
+    </script>
   </body>
 </html>
