@@ -33,8 +33,7 @@ hr{border:2px dashed #00FFFF;}
   </head>
   <body style="background-color:black;">
     <script>
-      const button = document.querySelector('input'); 
-      button.addEventListener('click', send);
+      document.getElementById("btn").addEventListener('click', send);
       function send(){
       if (button.value === 'send') {
         
@@ -59,7 +58,7 @@ hr{border:2px dashed #00FFFF;}
     <div>
             <h1>评论区（暂时无法保存评论）</h1><hr>
             <textarea id="typing">输入文字</textarea>
-            <input type="button" value="send" class="zuoshangB exit"/>
+            <input id="btn" type="button" value="send" class="zuoshangB exit"/>
             <hr>
             <div id="commend"></div>
         </div>
