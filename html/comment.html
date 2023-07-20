@@ -33,14 +33,19 @@ hr{border:2px dashed #00FFFF;}
   </head>
   <body style="background-color:black;">
     <script>
-      document.getElementById("btn").onclick=function(){send()};//设置按钮触发事件（函数send（））
-        function send(){
-            var g=new Date();//获取时间
-            var value= document.getElementById("typing").value;//获得文本框里的内容
-            var p= document.createElement("p");//创建新元素，也即结点
-            p.innerHTML='<hr>'+'<h1>'+value+'<h1>'+'<br>'+g.toUTCString();//往结点里塞内容
-            document.getElementById("commend").prepend(p); //向指定内容（此处是id"commend"）里添加子节点，作为第一个结点。
+      const button = document.querySelector('input'); 
+      button.addEventListener('click', send);
+      function send(){
+      if (button.value === 'send') {
+        
+            var g=new Date();
+            var value= document.getElementById("typing").value;
+            var p= document.createElement("p");
+            p.innerHTML='<hr>'+'<h1>'+value+'<h1>'+'<br>'+g.toUTCString();
+            document.getElementById("commend").prepend(p);
+        console.log("按下");
         }
+      }
     </script>
     <div id="header">
     <table>
@@ -54,7 +59,7 @@ hr{border:2px dashed #00FFFF;}
     <div>
             <h1>评论区（暂时无法保存评论）</h1><hr>
             <textarea id="typing">输入文字</textarea>
-            <button id="btn" class="zuoshangB exit">发送评论</button>
+            <input type="button" value="send" class="zuoshangB exit"/>
             <hr>
             <div id="commend"></div>
         </div>
