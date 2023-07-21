@@ -1,3 +1,3 @@
 <script>
- document.getElementById("btn1").setAttribute('value',"123");
+ document.getElementById("btn").setAttribute('value',"123");
  </script>
