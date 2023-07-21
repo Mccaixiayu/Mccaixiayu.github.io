@@ -1,3 +1,3 @@
 <script>
- alert("欢迎");
+ document.getElementById("btn1").setAttribute('value',"123");
  </script>
