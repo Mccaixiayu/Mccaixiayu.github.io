@@ -52,7 +52,6 @@ hr{border:2px dashed #00FFFF;}
             <em style="color:#00FFFF;align:left;font-size:55px;" >评论区（暂时无法保存评论）</h1><hr>
             <textarea id="typing">输入文字</textarea>
             <input id="btn" type="button" value="send" class="zuoshangB exit"/>
-              <button onclick="send()" class="zuoshangB exit">测试2</button>
             <hr>
             <div id="commend"></div>
         </div>
@@ -64,7 +63,7 @@ hr{border:2px dashed #00FFFF;}
             var g=new Date();
             var value= document.getElementById("typing").value;
             var p= document.createElement("p");
-            p.innerHTML='<hr>'+"用户:"+'<h4>'+value+'<h4>'+'<br>'+g.toUTCString();
+            p.innerHTML='<hr>'+"用户:"+'<h4>'+value+'</h4>'+'<br>'+g.toUTCString();
             document.getElementById("commend").prepend(p);
         console.log("按下");
         }
